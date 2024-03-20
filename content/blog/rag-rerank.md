@@ -35,7 +35,7 @@ flowchart TD
 Reranking models make sense when you consider these assumptions -
 * LLMs have limited context windows, restricting the amount of document chunks you can pass as context with your query.
 * Most LLMs have a "Missing the Needle-in-the-haystack" problem. I found the article [here](https://arize.com/blog-course/the-needle-in-a-haystack-test-evaluating-the-performance-of-llm-rag-systems/) quite insightful, but the TL;DR is that when you have a heavily stuffed context window, LLMs can miss certain details within all the noise. With RAG, that detail may have been the most important detail needed to formulate a good response.
-* While Vector embeddings may live in the same (latent?) space as the actual LLMs (depends on the embedding model), the Vector similarity search is a crude approximation of what the LLM can perform.
+* While Vector embeddings may live in the same (latent?) space as the actual LLMs (depends on the embedding model), the Vector similarity search is a crude approximation of what a model like an LLM can perform.
 
 Reranking models are closer to full-fledged LLMs than they are to vector search algorithms, and are able to incorporate more nuance.
 

@@ -28,7 +28,7 @@
 <meta itemprop="name" content="When does a reranking step with RAG make sense?">
 <meta itemprop="description" content="A post on what reranking when using Retrieval Augmented Generation with LLMs is and when does it make sense to use this approach?"><meta itemprop="datePublished" content="2024-03-20T10:59:38-04:00" />
 <meta itemprop="dateModified" content="2024-03-20T10:59:38-04:00" />
-<meta itemprop="wordCount" content="354">
+<meta itemprop="wordCount" content="357">
 <meta itemprop="keywords" content="RAG,LLM,rerank,ai," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -258,7 +258,7 @@
 <ul>
 <li>LLMs have limited context windows, restricting the amount of document chunks you can pass as context with your query.</li>
 <li>Most LLMs have a &ldquo;Missing the Needle-in-the-haystack&rdquo; problem. I found the article <a href="https://arize.com/blog-course/the-needle-in-a-haystack-test-evaluating-the-performance-of-llm-rag-systems/">here</a> quite insightful, but the TL;DR is that when you have a heavily stuffed context window, LLMs can miss certain details within all the noise. With RAG, that detail may have been the most important detail needed to formulate a good response.</li>
-<li>While Vector embeddings may live in the same (latent?) space as the actual LLMs (depends on the embedding model), the Vector similarity search is a crude approximation of what the LLM can perform.</li>
+<li>While Vector embeddings may live in the same (latent?) space as the actual LLMs (depends on the embedding model), the Vector similarity search is a crude approximation of what a model like an LLM can perform.</li>
 </ul>
 <p>Reranking models are closer to full-fledged LLMs than they are to vector search algorithms, and are able to incorporate more nuance.</p>
 <p>Given these assumptions, reranking can be useful because not only can you reduce the amount of context (and thus noise) passed to the LLM, but your context is now more appropriate for the query that the LLM is trying to answer.</p>

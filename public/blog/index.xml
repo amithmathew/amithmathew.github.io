@@ -7,14 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2024, Amith Mathew.</copyright>
-    <lastBuildDate>Tue, 19 Mar 2024 19:47:35 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 20 Mar 2024 10:59:38 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When does a reranking step with RAG make sense?</title>
+      <link>http://localhost:1313/when-does-a-reranking-step-with-rag-make-sense/</link>
+      <pubDate>Wed, 20 Mar 2024 10:59:38 -0400</pubDate>
+      <guid>http://localhost:1313/when-does-a-reranking-step-with-rag-make-sense/</guid>
+      <description>I was talking to a colleague about a RAG system he&amp;rsquo;s evaluating and he mentioned that the architecture includes a reranking model. This sent me down a bit of a rabbit hole about rerankers and why reranking models make sense within the RAG architecture.&#xA;A typical RAG workflow looks like this.&#xA;flowchart TD id1(Document Chunk) id2[[Embedding Model]] id3[( Vector DB )] id5(Query) id6[[Embedding Model]] llm[[LLM]] resp(LLM Response) id1--&gt;id2-- Stored in --&gt;id3 id5--&gt;id6-- Sent to --&gt;id3 subgraph sg1 [&#34;</description>
+    </item>
     <item>
       <title>Hello</title>
       <link>http://localhost:1313/hello/</link>
       <pubDate>Tue, 19 Mar 2024 19:47:35 -0400</pubDate>
       <guid>http://localhost:1313/hello/</guid>
-      <description>These are exciting times we&amp;rsquo;re living in - AGI is around the corner, with massive implications for the area that I work in, data engineering, among others. I expect the way we developers interact with our computers will become multi-modal as these AI models mature. Apple dipping their toes in VR with the Apple Vision Pro is another thread in what may become this majestic tapestry (the happy path). Not only will these things change the way life is lived, but I think they also raise fundamental questions about human existence, consciousness and purpose that are beyond the remit of Science and that only Philosophy can answer.</description>
+      <description>These are exciting times we&amp;rsquo;re living in - AGI is around the corner, with massive implications for the area that I work in, data engineering, among others.&#xA;I expect the way we developers interact with our computers will become multi-modal as these AI models mature. Apple dipping their toes in VR with the Apple Vision Pro is another thread in what may become this majestic tapestry (the happy path). Not only will these things change the way life is lived, but I think they also raise fundamental questions about human existence, consciousness and purpose that are beyond the remit of Science and that only Philosophy can answer.</description>
     </item>
   </channel>
 </rss>

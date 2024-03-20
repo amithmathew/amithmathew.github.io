@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Amith Mathew on Code and Contemplation</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in Amith Mathew on Code and Contemplation</description>
+    <title>Personal on Code and Contemplation</title>
+    <link>http://localhost:1313/blog/personal/</link>
+    <description>Recent content in Personal on Code and Contemplation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2024, Amith Mathew.</copyright>
-    <lastBuildDate>Wed, 20 Mar 2024 10:59:38 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>When does a reranking step with RAG make sense?</title>
-      <link>http://localhost:1313/when-does-a-reranking-step-with-rag-make-sense/</link>
-      <pubDate>Wed, 20 Mar 2024 10:59:38 -0400</pubDate>
-      <guid>http://localhost:1313/when-does-a-reranking-step-with-rag-make-sense/</guid>
-      <description>flowchart TD id1(Document Chunk) id2[[Embedding Model]] id3[(Vector DB)] id4((Similarity Search)) id5(Query) id6[[Embedding Model]] id1--&gt;id2--Stored in--&gt;id3 id5--&gt;id6--Sent to--&gt;id3 id3--&gt;id4 </description>
-    </item>
+    <lastBuildDate>Tue, 19 Mar 2024 19:47:35 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/personal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello</title>
       <link>http://localhost:1313/hello/</link>

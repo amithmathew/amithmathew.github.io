@@ -2,6 +2,7 @@
 title: 'Hello'
 date: 2024-03-19T19:47:35-04:00
 draft: false
+tags: [ai, philosophy, personal]
 ---
 
 These are exciting times we're living in - AGI is around the corner, with massive implications for the area that I work in, data engineering, among others. 

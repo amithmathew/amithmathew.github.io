@@ -1,0 +1,32 @@
+baseURL: https://amithm.ca/
+languageCode: en-us
+title: Code and Contemplation
+author: Amith Mathew
+theme: hugo-bearblog
+
+enableRobotsTXT: true
+
+copyright: "© 2024, Amith Mathew."
+#capitalizeListTitles: false
+
+# Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
+disableKinds: 
+  - taxonomy
+ignoreErrors:
+  - error-disable-taxonomy
+
+permalinks:
+  blog: "/:slug/"
+  tags: "/blog/:slug"
+
+params:
+  description: "An itinerant mind."
+  hideMadeWithLine: true
+
+  
+
+menu:
+  main:
+    - name: Helios Inc.
+      weight: 10
+      url: /helios

@@ -59,7 +59,7 @@ flowchart TD
     id3-. Similarity Search .->id3
     end
 
-    id7[[Reranking MOdel]]
+    id7[[Reranking Model]]
 
     sg1-- Document Chunks -->id7
     id6-->id7

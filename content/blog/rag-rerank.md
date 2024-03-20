@@ -62,7 +62,7 @@ flowchart TD
     id7[[Reranking Model]]
 
     sg1-- Document Chunks -->id7
-    id6-->id7
+    id5-->id7
     id7-- Reranked Document Chunks, top-k -->llm
     id5-->llm
     llm-->resp

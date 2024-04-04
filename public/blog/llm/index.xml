@@ -1,20 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LLM on Code and Contemplation</title>
+    <title>Llm on Code and Contemplation</title>
     <link>http://localhost:1313/blog/llm/</link>
-    <description>Recent content in LLM on Code and Contemplation</description>
+    <description>Recent content in Llm on Code and Contemplation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2024, Amith Mathew.</copyright>
-    <lastBuildDate>Wed, 20 Mar 2024 10:59:38 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2024 15:57:24 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using GenAI to make customer segmentation more fun!</title>
+      <link>http://localhost:1313/using-genai-to-make-customer-segmentation-more-fun/</link>
+      <pubDate>Thu, 04 Apr 2024 15:57:24 -0400</pubDate>
+      <guid>http://localhost:1313/using-genai-to-make-customer-segmentation-more-fun/</guid>
+      <description>Most marketers are familiar with Customer Segmentation. Imagine you ran an online retailer. You have thousands of customers, about whom there are a few details you know, such as the country they&amp;rsquo;re from, or the device they used to browse or purchase items from your store, or what their most commonly purchased item categories are etc. Imagine that you now want to send a promotion out, you now have a few choices.</description>
+    </item>
+    <item>
+      <title>Storytelling</title>
+      <link>http://localhost:1313/storytelling/</link>
+      <pubDate>Fri, 22 Mar 2024 08:57:49 -0400</pubDate>
+      <guid>http://localhost:1313/storytelling/</guid>
+      <description>This is a page about »Storytelling«.</description>
+    </item>
+    <item>
+      <title>Divine Councilship</title>
+      <link>http://localhost:1313/divine-councilship/</link>
+      <pubDate>Thu, 21 Mar 2024 13:41:18 -0400</pubDate>
+      <guid>http://localhost:1313/divine-councilship/</guid>
+      <description>This is a page about »Divine Councilship«.</description>
+    </item>
+    <item>
+      <title>Simulation Theory</title>
+      <link>http://localhost:1313/simulation-theory/</link>
+      <pubDate>Thu, 21 Mar 2024 13:40:53 -0400</pubDate>
+      <guid>http://localhost:1313/simulation-theory/</guid>
+      <description>This is a page about »Simulation Theory«.</description>
+    </item>
+    <item>
+      <title>St Augustine</title>
+      <link>http://localhost:1313/st-augustine/</link>
+      <pubDate>Thu, 21 Mar 2024 13:40:38 -0400</pubDate>
+      <guid>http://localhost:1313/st-augustine/</guid>
+      <description>This is a page about »St Augustine«.</description>
+    </item>
     <item>
       <title>When does a reranking step with RAG make sense?</title>
       <link>http://localhost:1313/when-does-a-reranking-step-with-rag-make-sense/</link>
       <pubDate>Wed, 20 Mar 2024 10:59:38 -0400</pubDate>
       <guid>http://localhost:1313/when-does-a-reranking-step-with-rag-make-sense/</guid>
-      <description>flowchart TD id1(Document Chunk) id2[[Embedding Model]] id3[(Vector DB)] id4((Similarity Search)) id5(Query) id6[[Embedding Model]] id1--&gt;id2--Stored in--&gt;id3 id5--&gt;id6--Sent to--&gt;id3 id3--&gt;id4 </description>
+      <description>I was talking to a colleague about a RAG system he&amp;rsquo;s evaluating and he mentioned that the architecture includes a reranking model. This sent me down a bit of a rabbit hole about rerankers and why reranking models make sense within the RAG architecture.&#xA;A typical RAG workflow looks like this.&#xA;flowchart TD id1(Document Chunk) id2[[Embedding Model]] id3[( Vector DB )] id5(Query) id6[[Embedding Model]] llm[[LLM]] resp(LLM Response) id1--&gt;id2-- Stored in --&gt;id3 id5--&gt;id6-- Sent to --&gt;id3 subgraph sg1 [&#34;</description>
     </item>
   </channel>
 </rss>

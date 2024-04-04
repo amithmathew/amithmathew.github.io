@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Big-Data on Code and Contemplation</title>
+    <link>http://localhost:1313/blog/big-data/</link>
+    <description>Recent content in Big-Data on Code and Contemplation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2024, Amith Mathew.</copyright>
+    <lastBuildDate>Thu, 21 Mar 2024 11:36:36 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/big-data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Lakehouses</title>
+      <link>http://localhost:1313/data-lakehouses/</link>
+      <pubDate>Thu, 21 Mar 2024 11:36:36 -0400</pubDate>
+      <guid>http://localhost:1313/data-lakehouses/</guid>
+      <description>The standard pitch when we talk about Data Lakehouses is the fact that there are three distinct personas that need to access data.&#xA;Analyst - Structured data - Data Warehouse Data Engineer - Semistructured data - Data Lake ML Engineer - Multimodal data - Data Lake Things to think about&#xA;Open format of the data Compatibility with multiple engines Independent Security and Governance outside of the Engine Metadata Management Data Sharing Things that are nice to have</description>
+    </item>
+  </channel>
+</rss>

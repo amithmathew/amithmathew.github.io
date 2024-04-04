@@ -32,3 +32,19 @@ menu:
     - name: Helios Inc.
       weight: 10
       url: /helios
+
+markup:
+  goldmark:
+    parser:
+      wrapStandAloneImageWithinParagraph: false
+      attribute:
+        block: true
+        title: true
+
+
+module:
+  mounts:
+    - source: images
+      target: static/images
+    - source: helios
+      target: static/helios

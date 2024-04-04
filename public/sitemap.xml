@@ -3,22 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/blog/ai/</loc>
-    <lastmod>2024-03-20T10:59:38-04:00</lastmod>
+    <lastmod>2024-04-04T15:57:24-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-03-20T10:59:38-04:00</lastmod>
+    <lastmod>2024-04-04T15:57:24-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2024-03-20T10:59:38-04:00</lastmod>
+    <lastmod>2024-04-04T15:57:24-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/customer-segmentation/</loc>
+    <lastmod>2024-04-04T15:57:24-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/llm/</loc>
-    <lastmod>2024-03-20T10:59:38-04:00</lastmod>
+    <lastmod>2024-04-04T15:57:24-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/marketing/</loc>
+    <lastmod>2024-04-04T15:57:24-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/using-genai-to-make-customer-segmentation-more-fun/</loc>
+    <lastmod>2024-04-04T15:57:24-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/personal/</loc>
+    <lastmod>2024-03-22T08:57:49-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/philosophy/</loc>
+    <lastmod>2024-03-22T08:57:49-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/rag/</loc>
-    <lastmod>2024-03-20T10:59:38-04:00</lastmod>
+    <lastmod>2024-03-22T08:57:49-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/rerank/</loc>
-    <lastmod>2024-03-20T10:59:38-04:00</lastmod>
+    <lastmod>2024-03-22T08:57:49-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/storytelling/</loc>
+    <lastmod>2024-03-22T08:57:49-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/divine-councilship/</loc>
+    <lastmod>2024-03-21T13:41:18-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/simulation-theory/</loc>
+    <lastmod>2024-03-21T13:40:53-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/st-augustine/</loc>
+    <lastmod>2024-03-21T13:40:38-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/big-data/</loc>
+    <lastmod>2024-03-21T11:36:36-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/data-lakehouses/</loc>
+    <lastmod>2024-03-21T11:36:36-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/datalake/</loc>
+    <lastmod>2024-03-21T11:36:36-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/lakehouse/</loc>
+    <lastmod>2024-03-21T11:36:36-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/when-does-a-reranking-step-with-rag-make-sense/</loc>
     <lastmod>2024-03-20T10:59:38-04:00</lastmod>

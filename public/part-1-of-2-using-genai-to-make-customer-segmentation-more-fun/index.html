@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>[Part 1 of 2] Using GenAI to make customer segmentation more fun! | Code and Contemplation</title>
+<meta name="title" content="[Part 1 of 2] Using GenAI to make customer segmentation more fun!" />
+<meta name="description" content="Most marketers are familiar with customer segmentation. Let&#39;s do some customer segmentation with ML and then use Google Gemini to add some sizzle!" />
+<meta name="keywords" content="ai,llm,marketing,customer-segmentation," />
+
+
+<meta property="og:title" content="[Part 1 of 2] Using GenAI to make customer segmentation more fun!" />
+<meta property="og:description" content="Most marketers are familiar with customer segmentation. Let&#39;s do some customer segmentation with ML and then use Google Gemini to add some sizzle!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/part-1-of-2-using-genai-to-make-customer-segmentation-more-fun/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-04-04T15:57:24-04:00" />
+<meta property="article:modified_time" content="2024-04-04T15:57:24-04:00" />
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="[Part 1 of 2] Using GenAI to make customer segmentation more fun!"/>
+<meta name="twitter:description" content="Most marketers are familiar with customer segmentation. Let&#39;s do some customer segmentation with ML and then use Google Gemini to add some sizzle!"/>
+
+
+
+<meta itemprop="name" content="[Part 1 of 2] Using GenAI to make customer segmentation more fun!">
+<meta itemprop="description" content="Most marketers are familiar with customer segmentation. Let&#39;s do some customer segmentation with ML and then use Google Gemini to add some sizzle!"><meta itemprop="datePublished" content="2024-04-04T15:57:24-04:00" />
+<meta itemprop="dateModified" content="2024-04-04T15:57:24-04:00" />
+<meta itemprop="wordCount" content="1336">
+<meta itemprop="keywords" content="ai,llm,marketing,customer-segmentation," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Code and Contemplation</h2>
+</a>
+<nav><a href="/">Home</a>
+
+<a href="/helios">Helios Inc.</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>[Part 1 of 2] Using GenAI to make customer segmentation more fun!</h1>
+<p>
+  <i>
+    <time datetime='2024-04-04' pubdate>
+      04 Apr, 2024
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>Most marketers are familiar with Customer Segmentation. Imagine you ran an online retailer. You have thousands of customers, about whom there are a few details you know, such as the country they&rsquo;re from, or the device they used to browse or purchase items from your store, or what their most commonly purchased item categories are etc. Imagine that you now want to send a promotion out, you now have a few choices.</p>
+<h3 id="the-email-blast-that-usually-goes-to-spam">The Email Blast that usually goes to Spam</h3>
+<p>You could just send out an email blast to all your customers.</p>
+<p><em>&ldquo;30% off on all cosmetics!&rdquo;</em></p>
+<p>As somebody who doesn&rsquo;t use cosmetics personally, I might be a little irritated. Send enough of these and I might mark your email as Spam, or unsubscribe (<em>oh no!</em>).</p>
+<figure><img src="/images/spam-bin.png" width="500">
+</figure>
+
+<h3 id="rule-based-segmentation">Rule-based Segmentation</h3>
+<p>You could use a rule-based approach to segmentation.</p>
+<p><em>&ldquo;I know this product appeals to customers who are between ages of 20 and 50 and live in the United States. That&rsquo;s who I&rsquo;ll send this promotion to!&rdquo;</em></p>
+<p>This works, but this assumes that you know the exact audience that your promoted products are going to appeal to, and are able to build the right filters to target them. A little hard to scale, especially if you have many categories of items or a diverse enough customer base.</p>
+<figure><img src="/images/rule-based-segmentation.png" width="500">
+</figure>
+
+<h3 id="old-fashioned-ml">Old-Fashioned ML</h3>
+<p>You could old-fashioned ML! <a href="https://en.wikipedia.org/wiki/K-means_clustering"><em>k</em>-means</a> clustering to be precise. I think this makes WAY more sense than the other two approaches as it&rsquo;s scalable and easy to implement.</p>
+<figure><img src="/images/old-fashioned-ml-superhero.png" width="500">
+</figure>
+
+<p>Here&rsquo;s how to think about <em>k</em>-means. If I gave you a list of locations with two &ldquo;features&rdquo; - an x coordinate and a y coordinate and I tell you, &lsquo;Reader, I need to split these into two groups based on distance&rsquo;, how would you go about it? One approach would be to map these locations onto a 2-d plane, and &ldquo;learn&rdquo; where the hypothetical centers of two groups will lie on this plane given a particular way to calculate distance between points. In this case let&rsquo;s keep it trivial, &ldquo;distance&rdquo; is going to be actual distance between the two points on the plane.</p>
+<p>Now once I&rsquo;ve trained my model, given any new location, I can immediately calculate distance to the hypothetical group centers for the new point - the new location belongs to the group that it is closest to.</p>
+<p>Now let&rsquo;s scale this up. Instead of a 2-d plane, we have a n-dimensional space - each dimension represents a particular &ldquo;feature&rdquo; of a customer - their lifetime total purchases, purchases in the last 30 days, ratio of activity to checkout etc. Now we can run the same <em>k</em>-means algorithm to group customers into different segments. The algorithm does expect you to tell it how many clusters to group the data into - so we&rsquo;ll look at ways to figure this out.</p>
+<p>We&rsquo;ll Google Cloud BigQuery for a lot of the heavy lifting here, and streamlit to put a pretty face on it.</p>
+<p>Let&rsquo;s get started!</p>
+<h2 id="getting-started">Getting Started</h2>
+<p><strong>Ingredients</strong></p>
+<ul>
+<li>1 GCP project</li>
+<li>1 user account with permissions to create datasets, tables and run SQL on BigQuery</li>
+<li>Access to BigQuery public datasets</li>
+<li>Access to Generative Models on VertexAI</li>
+</ul>
+<p>We&rsquo;ll use fictitious data from <a href="https://console.cloud.google.com/marketplace/product/bigquery-public-data/thelook-ecommerce">TheLook</a>, one of the BigQuery&rsquo;s public datasets. The data model is straightforward and we&rsquo;ll use the following tables -</p>
+<ol>
+<li><code>bigquery-public-data.thelook_ecommerce.products</code></li>
+<li><code>bigquery-public-data.thelook_ecommerce.orders</code></li>
+<li><code>bigquery-public-data.thelook_ecommerce.order_items</code></li>
+<li><code>bigquery-public-data.thelook_ecommerce.users</code></li>
+</ol>
+<h2 id="mise-en-place">Mise-en-place</h2>
+<p>Let&rsquo;s build out our customer features. For each customer, I need to determine what dimensions I want to use to cluster them - these are our customer features.</p>
+<p>I&rsquo;m going to use the following because they were easy to compute, but there&rsquo;s better features to be found if you were to put some thought into it.</p>
+<ul>
+<li>Age</li>
+<li>Gender</li>
+<li>City</li>
+<li>Country</li>
+<li>Traffic Source</li>
+<li>Last 12 Months spend by Department-Category</li>
+<li>Last 24 Months spend by Department-Category</li>
+<li>Last 36 Months spend by Department-Category</li>
+</ul>
+<p>I do this using the following SQL query.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">replace</span> <span style="color:#66d9ef">table</span> <span style="color:#f92672">&lt;</span>my<span style="color:#f92672">-</span>project<span style="color:#f92672">&gt;</span>.<span style="color:#f92672">&lt;</span>my<span style="color:#f92672">-</span>dataset<span style="color:#f92672">&gt;</span>.customer_features
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">as</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> order_full <span style="color:#66d9ef">as</span> (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">select</span>  o.order_id, o.user_id, o.status, o.gender, o.num_of_item, o.created_at,
+</span></span><span style="display:flex;"><span>                i.product_id, i.inventory_item_id, i.status <span style="color:#66d9ef">as</span> order_item_status, 
+</span></span><span style="display:flex;"><span>                i.sale_price, p.department, p.category  
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">from</span>    <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.thelook_ecommerce.orders<span style="color:#f92672">`</span> o,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.thelook_ecommerce.order_items<span style="color:#f92672">`</span> i, 
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.thelook_ecommerce.products<span style="color:#f92672">`</span> p
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">where</span> o.order_id <span style="color:#f92672">=</span> i.order_id
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">and</span> i.product_id <span style="color:#f92672">=</span> p.id
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> created_at <span style="color:#66d9ef">desc</span>
+</span></span><span style="display:flex;"><span>    ),
+</span></span><span style="display:flex;"><span>    spend <span style="color:#66d9ef">as</span> (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">select</span>  user_id,
+</span></span><span style="display:flex;"><span>                CONCAT(department, <span style="color:#e6db74">&#39;_&#39;</span>, category) <span style="color:#66d9ef">as</span> dep_cat,
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">SUM</span>(
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">CASE</span> 
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">WHEN</span> created_at 
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">BETWEEN</span> TIMESTAMP_ADD(<span style="color:#66d9ef">CURRENT_TIMESTAMP</span>(), INTERVAL <span style="color:#f92672">-</span><span style="color:#ae81ff">365</span> <span style="color:#66d9ef">DAY</span>) 
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">CURRENT_TIMESTAMP</span>()
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">THEN</span> sale_price<span style="color:#f92672">*</span>num_of_item
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">ELSE</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">END</span>
+</span></span><span style="display:flex;"><span>                ) <span style="color:#66d9ef">AS</span> total_12_months,
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">SUM</span>(
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">CASE</span> 
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">WHEN</span> created_at 
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">BETWEEN</span> TIMESTAMP_ADD(<span style="color:#66d9ef">CURRENT_TIMESTAMP</span>(), INTERVAL <span style="color:#f92672">-</span><span style="color:#ae81ff">730</span> <span style="color:#66d9ef">DAY</span>) 
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">CURRENT_TIMESTAMP</span>()
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">THEN</span> sale_price<span style="color:#f92672">*</span>num_of_item
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">ELSE</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">END</span>
+</span></span><span style="display:flex;"><span>                ) <span style="color:#66d9ef">AS</span> total_24_months,
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">SUM</span>(
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">CASE</span> 
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">WHEN</span> created_at 
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">BETWEEN</span> TIMESTAMP_ADD(<span style="color:#66d9ef">CURRENT_TIMESTAMP</span>(), INTERVAL <span style="color:#f92672">-</span><span style="color:#ae81ff">1095</span> <span style="color:#66d9ef">DAY</span>) 
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">CURRENT_TIMESTAMP</span>()
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">THEN</span> sale_price<span style="color:#f92672">*</span>num_of_item
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">ELSE</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">END</span>
+</span></span><span style="display:flex;"><span>                ) <span style="color:#66d9ef">AS</span> total_36_months
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">from</span> order_full
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> user_id, dep_cat
+</span></span><span style="display:flex;"><span>    ),
+</span></span><span style="display:flex;"><span>    user_all <span style="color:#66d9ef">as</span> (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">select</span>  s.user_id, 
+</span></span><span style="display:flex;"><span>                s.dep_cat,
+</span></span><span style="display:flex;"><span>                s.total_12_months,
+</span></span><span style="display:flex;"><span>                s.total_24_months,
+</span></span><span style="display:flex;"><span>                s.total_36_months,
+</span></span><span style="display:flex;"><span>                u.age,
+</span></span><span style="display:flex;"><span>                u.gender,
+</span></span><span style="display:flex;"><span>                u.city,
+</span></span><span style="display:flex;"><span>                u.country,
+</span></span><span style="display:flex;"><span>                u.traffic_source
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">from</span>    spend s, 
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.thelook_ecommerce.users<span style="color:#f92672">`</span> u
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">where</span> s.user_id <span style="color:#f92672">=</span> u.id
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">from</span> user_all
+</span></span><span style="display:flex;"><span>    PIVOT (
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SUM</span>(total_12_months) <span style="color:#66d9ef">as</span> total_12_months,
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SUM</span>(total_24_months) <span style="color:#66d9ef">AS</span> total_24_months,
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">SUM</span>(total_36_months) <span style="color:#66d9ef">AS</span> total_36_months
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FOR</span> dep_cat <span style="color:#66d9ef">IN</span> (
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Women_Accessories&#39;</span>,<span style="color:#e6db74">&#39;Women_Plus&#39;</span>,<span style="color:#e6db74">&#39;Men_Accessories&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Women_Swim&#39;</span>,<span style="color:#e6db74">&#39;Women_Active&#39;</span>,<span style="color:#e6db74">&#39;Women_Socks_Hosiery&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Men_Active&#39;</span>,<span style="color:#e6db74">&#39;Men_Socks&#39;</span>,<span style="color:#e6db74">&#39;Men_Swim&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Women_Dresses&#39;</span>,<span style="color:#e6db74">&#39;Women_Pants_Capris&#39;</span>,<span style="color:#e6db74">&#39;Men_FashionHoodies_Sweatshirts&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Women_Skirts&#39;</span>,<span style="color:#e6db74">&#39;Women_Blazers_Jackets&#39;</span>,<span style="color:#e6db74">&#39;Women_Suits&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Women_Tops_Tees&#39;</span>,<span style="color:#e6db74">&#39;Women_Sweaters&#39;</span>,<span style="color:#e6db74">&#39;Women_FashionHoodies_Sweatshirts&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Women_Shorts&#39;</span>,<span style="color:#e6db74">&#39;Women_Jeans&#39;</span>,<span style="color:#e6db74">&#39;Women_Maternity&#39;</span>,<span style="color:#e6db74">&#39;Men_Shorts&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Men_Sleep_Lounge&#39;</span>,<span style="color:#e6db74">&#39;Men_Suits_SportCoats&#39;</span>,<span style="color:#e6db74">&#39;Men_Pants&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Women_Intimates&#39;</span>,<span style="color:#e6db74">&#39;Women_Sleep_Lounge&#39;</span>,<span style="color:#e6db74">&#39;Women_Outerwear_Coats&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Men_Tops_Tees&#39;</span>,<span style="color:#e6db74">&#39;Men_Underwear&#39;</span>,<span style="color:#e6db74">&#39;Men_Jeans&#39;</span>,<span style="color:#e6db74">&#39;Men_Sweaters&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Women_Leggings&#39;</span>,<span style="color:#e6db74">&#39;Women_Jumpsuits_Rompers&#39;</span>,<span style="color:#e6db74">&#39;Men_Outerwear_Coats&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Women_ClothingSets&#39;</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p>Yes, this is ugly - no, don&rsquo;t judge me. I need to specify the department-category combinations in order to do the PIVOT. I get that by running the following query.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">replace</span>(
+</span></span><span style="display:flex;"><span>        regexp_replace(
+</span></span><span style="display:flex;"><span>            STRING_AGG(
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">distinct</span> CONCAT(<span style="color:#e6db74">&#34;&#39;&#34;</span>, department, <span style="color:#e6db74">&#39;_&#39;</span>, category, <span style="color:#e6db74">&#34;&#39;&#34;</span>)
+</span></span><span style="display:flex;"><span>            ), r<span style="color:#e6db74">&#39;\s&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>), 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;&amp;&#39;</span>, <span style="color:#e6db74">&#39;_&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.thelook_ecommerce.products<span style="color:#f92672">`</span>;
+</span></span></code></pre></div><p>Again, this is a safe space, no judging.</p>
+<p>You should now have a <code>customer_features</code> table in your dataset (you did replace <code>my-project</code> and <code>my-dataset</code> in the SQL above with your project name and dataset name didn&rsquo;t you?). And it should look something like this.</p>
+<figure><img src="/images/gcp-bq-customer-segmentation-genai-ss1.png" width="500">
+</figure>
+
+<p>Now - we have some nulls in our department-category pivot columns because not every customer has purchases for every department-category combination. And the <em>k</em>-means algorithm we&rsquo;ll be using doesn&rsquo;t like nulls. So we&rsquo;ll make them 0s. I don&rsquo;t like having to write down all those column names by hand, so running the following SQL should generate the query you need to run. You could probably <code>EXECUTE IMMEDIATE</code> it directly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> 
+</span></span><span style="display:flex;"><span>    CONCAT(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;UPDATE `&lt;my-project&gt;.&lt;my-dataset&gt;.customer_features` SET &#34;</span>, 
+</span></span><span style="display:flex;"><span>        STRING_AGG(
+</span></span><span style="display:flex;"><span>            CONCAT( <span style="color:#66d9ef">column_name</span>, <span style="color:#e6db74">&#34; = &#34;</span>, <span style="color:#e6db74">&#34;COALESCE(&#34;</span>, <span style="color:#66d9ef">column_name</span>, <span style="color:#e6db74">&#34;, 0) &#34;</span>)), 
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;WHERE true;&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> <span style="color:#f92672">`&lt;</span>my<span style="color:#f92672">-</span>project<span style="color:#f92672">&gt;`</span>.<span style="color:#f92672">&lt;</span>my<span style="color:#f92672">-</span>dataset<span style="color:#f92672">&gt;</span>.INFORMATION_SCHEMA.COLUMNS
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> <span style="color:#66d9ef">table_name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;customer_features&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">and</span> <span style="color:#66d9ef">column_name</span> <span style="color:#66d9ef">like</span> <span style="color:#e6db74">&#39;total%&#39;</span>;
+</span></span></code></pre></div><p>Don&rsquo;t forget to use your own project and dataset names here. The generated SQL is large and ugly looking, so I&rsquo;ll spare you from looking at it, but go ahead and run that.</p>
+<h2 id="lets-cook-part-1-_k_-means">Let&rsquo;s Cook Part 1: <em>k</em>-means</h2>
+<p>Now&rsquo;s the fun part. BigQuery allows you to create models using SQL, a feature called BigQuery ML. We&rsquo;ll use this to <a href="https://cloud.google.com/bigquery/docs/reference/standard-sql/bigqueryml-syntax-create-kmeans">create</a> our <em>k</em>-means model.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> MODEL
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">`&lt;</span>my<span style="color:#f92672">-</span>project<span style="color:#f92672">&gt;</span>.<span style="color:#f92672">&lt;</span>my<span style="color:#f92672">-</span>dataset<span style="color:#f92672">&gt;</span>.customer_segments_model<span style="color:#f92672">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">OPTIONS</span>
+</span></span><span style="display:flex;"><span>  ( MODEL_TYPE<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;KMEANS&#39;</span>,
+</span></span><span style="display:flex;"><span>    NUM_CLUSTERS<span style="color:#f92672">=</span>HPARAM_RANGE(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>),
+</span></span><span style="display:flex;"><span>    KMEANS_INIT_METHOD<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;KMEANS++&#39;</span>,
+</span></span><span style="display:flex;"><span>    NUM_TRIALS<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>) 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`&lt;</span>my<span style="color:#f92672">-</span>project<span style="color:#f92672">&gt;</span>.<span style="color:#f92672">&lt;</span>my<span style="color:#f92672">-</span>dataset<span style="color:#f92672">&gt;</span>.customer_features<span style="color:#f92672">`</span>;
+</span></span></code></pre></div><p>Some things to note here, we could just decide that we want to split our customers into say 4 segments, and set <code>NUM_CLUSTERS</code> to 4. However, probably better to let hyperparameter tuning figure this out for us. By specifying <code>HPARAM_RANGE(3, 5)</code> we tell it to look at 3, 4 and 5 clusters and pick the most optimum number of clusters based on our data. You will need to specify <code>NUM_TRIALS</code> to enable hyperparameter tuning.</p>
+<p>Similarly, for the initialization of the algorithm, we&rsquo;ve set <code>KMEANS_INIT_METHOD</code> to <code>KMEANS++</code>. You can find more details about <em>k</em>-means++ <a href="https://en.wikipedia.org/wiki/K-means%2B%2B">here</a>.</p>
+<p>The default distance measure is Euclidean (think actual distance between two points). But you could change that to Cosine distance by setting <code>DISTANCE_TYPE</code>.</p>
+<p>This is going to take some time to complete. But once it&rsquo;s done, you should see a model turn up within your dataset under the <code>Models</code> dropdown. Clicking on the model and then clicking on the &ldquo;Details&rdquo; tab should give you more information on the model, including the number of segments it decided to settle on.</p>
+<figure><img src="/images/gcp-bq-customer-segmentation-genai-ss2.png" width="500">
+</figure>
+
+<p>Congratulations! We have now taken our transactional data, cleaned it up, put it into a form that the <em>k</em>-means model can consume, and trained up a <em>k</em>-means model including hyperparameter optimization to find the ideal number of clusters.</p>
+<p>In Part 2, we&rsquo;ll use this model to segment our customer data. We&rsquo;ll then use Google&rsquo;s Gemini Large Language model to generate some &ldquo;flavour&rdquo; text for each segment - a nice heading and a description that we&rsquo;ll surface using Streamlit.</p>
+<p>Until then!</p>
+
+</content>
+<p>
+  
+  <a href="http://localhost:1313/blog/ai/">#Ai</a>
+  
+  <a href="http://localhost:1313/blog/llm/">#Llm</a>
+  
+  <a href="http://localhost:1313/blog/marketing/">#Marketing</a>
+  
+  <a href="http://localhost:1313/blog/customer-segmentation/">#Customer-Segmentation</a>
+  
+</p>
+
+  </main>
+  <footer>
+</footer>
+
+    
+</body>
+
+
+
+</html>

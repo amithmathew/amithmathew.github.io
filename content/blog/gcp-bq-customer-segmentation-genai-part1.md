@@ -14,7 +14,7 @@ You could just send out an email blast to all your customers.
 
 _"30% off on all cosmetics!"_
 
-As somebody who doesn't use cosmetics personally, I might be a little irritated. Send enough of these and I might mark your email as Spam, or unsubscribe (_oh no!_).  
+As somebody who personally doesn't use cosmetics, I might be a little irritated. Send enough of these and I might mark your email as Spam, or unsubscribe (_oh no!_).  
 
 {{< figure src="/images/spam-bin.png" width=500 >}}
 

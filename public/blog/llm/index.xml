@@ -7,13 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2024, Amith Mathew.</copyright>
-    <lastBuildDate>Thu, 04 Apr 2024 15:57:24 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2024 19:30:38 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/llm/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Using GenAI to make customer segmentation more fun!</title>
-      <link>http://localhost:1313/using-genai-to-make-customer-segmentation-more-fun/</link>
+      <title>Gcp Bq Customer Segmentation Genai Part2</title>
+      <link>http://localhost:1313/gcp-bq-customer-segmentation-genai-part2/</link>
+      <pubDate>Thu, 04 Apr 2024 19:30:38 -0400</pubDate>
+      <guid>http://localhost:1313/gcp-bq-customer-segmentation-genai-part2/</guid>
+      <description>This is a page about »Gcp Bq Customer Segmentation Genai Part2«.</description>
+    </item>
+    <item>
+      <title>[Part 1 of 2] Using GenAI to make customer segmentation more fun!</title>
+      <link>http://localhost:1313/part-1-of-2-using-genai-to-make-customer-segmentation-more-fun/</link>
       <pubDate>Thu, 04 Apr 2024 15:57:24 -0400</pubDate>
-      <guid>http://localhost:1313/using-genai-to-make-customer-segmentation-more-fun/</guid>
+      <guid>http://localhost:1313/part-1-of-2-using-genai-to-make-customer-segmentation-more-fun/</guid>
       <description>Most marketers are familiar with Customer Segmentation. Imagine you ran an online retailer. You have thousands of customers, about whom there are a few details you know, such as the country they&amp;rsquo;re from, or the device they used to browse or purchase items from your store, or what their most commonly purchased item categories are etc. Imagine that you now want to send a promotion out, you now have a few choices.</description>
     </item>
     <item>

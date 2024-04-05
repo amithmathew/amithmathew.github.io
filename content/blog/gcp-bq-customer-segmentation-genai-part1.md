@@ -30,7 +30,7 @@ This works, but this assumes that you know the exact audience that your promoted
 
 ### Old-Fashioned ML
 
-You could old-fashioned ML! [_k_-means](https://en.wikipedia.org/wiki/K-means_clustering) clustering to be precise. I think this makes WAY more sense than the other two approaches as it's scalable and easy to implement. 
+You could use old-fashioned ML! [_k_-means](https://en.wikipedia.org/wiki/K-means_clustering) clustering to be precise. I think this makes WAY more sense than the other two approaches as it's scalable and easy to implement. 
 
 {{< figure src="/images/old-fashioned-ml-superhero.png" width=500 >}}
 

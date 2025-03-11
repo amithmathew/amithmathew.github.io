@@ -20,10 +20,11 @@ I used to think Conway's Law was a Bad^tm^ thing - "Your dysfunctional enterpris
 
 Many have come for the King, and all have missed. 
 
-SQL for "read" workloads will never die. DML and DDL are a different story, and might be replaced by alternatives at some point in the future (not now though - see BigQuery steadily [adding more DDL support](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language)!). SQL for Read is just efficient - you declare to the SQL engine what output you want and the engine figures out how to get it for you. Just look out how our industry is moving back to SQL -  
+SQL for "read" workloads will never die. DML and DDL are a different story, and might be replaced by alternatives at some point in the future (not now though - see BigQuery steadily [adding more DDL support](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language)!). SQL for Read is just efficient - you declare to the SQL engine what output you want and the engine figures out how to get it for you. Just look at how our industry is moving back to SQL -  
 * Most Enterprise Spark workloads use SparkSQL
 * The Hadoop ecosystem went from MapReduce and Java to Hive and other SQL-like interfaces
 * Databricks is focussed on building a robust SQL layer with Databricks SQL
+* More and more folks are building datapipelines using DBT and other SQL based tooling
 * BigQuery and Snowflake remain wildly successful
 
 The most common complaint against SQL that I've heard is that the actual SQL Engine is a magic black box, which turns some programmers off, and is sometimes a bad thing in system design. But assuming you're following most basic best practices around data modelling, it works for 99% of the use cases I've seen. And for the remaining 1%, you go find somebody who knows how to open up that box and tweak the knobs to make it perform.

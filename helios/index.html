@@ -4,31 +4,102 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Helios Labs</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-<body class="h-100" style="background-color:#03111A">  
-  <div class="d-flex flex-column container">
-    <div class="container flex-row align-items-center text-center mt-0">
-        <img class="img-fluid" src="img/HeliosLabs.png">
-    </div>
-    <div class="d-flex flex-row container justify-content-around">
-        <div class="d-flex flex-column">
-            <img src="img/HeadHoncho.png" class="align-self-center rounded-circle" height="150">
-            <p>
-                <h4 class="text-center" style="color:#f2a10e;">Amith Mathew</h4>
-                <lead class="text-center" style="color:#f2a10e;">Head Honcho</lead>
-            </p>
-        </div>
-        <div class="d-flex flex-column">
-            <img src="img/shoggothcto.png" class="align-self-center rounded-circle" height="150">
-            <p>
-                <h4 class="text-center" style="color:#f2a10e;">BardGPT Llama</h4>
-                <lead class="text-center" style="color:#f2a10e;">CTO</lead>
-            </p>
-        </div>
-    </div>
-</div>
+    <style>
+      body {
+        background-color: #03111A;
+        color: #d9d9d9;
+        font-family: sans-serif;
+      }
 
-</body>
+      .banner-image {
+        max-width: 40%;
+        display: block;
+        margin: 20px auto;
+      }
+
+      .projects-container {
+        padding: 40px 20px;
+      }
+
+      .project {
+        margin-bottom: 20px;
+        border: 1px solid #f2a10e;
+        padding: 15px;
+        border-radius: 5px;
+      }
+
+      .project h4 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+      }
+
+      .project p {
+        font-size: 1em;
+        margin: 0 0 10px 0;
+      }
+
+      .project-links {
+        display: flex;
+        justify-content: flex-start; /* Align links to the left */
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .project-links a {
+        color: #d9d9d9;
+        text-decoration: none;
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      .project-links i {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body class="h-100">
+    <div class="container">
+      <img class="banner-image" src="img/HeliosLabs.png" alt="Helios Labs">
+
+      <div class="projects-container">
+
+        <div class="project">
+            <h4>Nutripixy</h4>
+            <p>AI-based meal tracker. Coming soon.</p>
+        </div>
+
+        <div class="project">
+            <h4>Hex.ai</h4>
+            <p>LLM-based personal coding assistant built as a VSCode extension. See the GitHub link for more details. Supports Gemini and OpenAI models.</p>
+            <div class="project-links">
+              <a href="https://marketplace.visualstudio.com/items?itemName=HeliosInc.hex" target="_blank">
+                <i class="fas fa-external-link-alt"></i>VisualStudio Marketplace
+              </a>
+              <a href="https://github.com/amithmathew/hex" target="_blank" class="github-link" title="Open in GitHub">
+                <i class="fab fa-github"></i> Github
+              </a>
+              </div>
+          </div>
+
+        <div class="project">
+            <h4>WeatherMood</h4>
+            <p>Sends current weather to GPT-4 to generate a DALL-E prompt. The prompt is used to generate the background for this webpage. Actual generation code is in a private repo (I don't want to expose my lat/long!).</p>
+            <div class="project-links">
+              <a href="https://amithm.ca/weathermood" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Visit Project
+              </a>
+              <a href="https://github.com/amithmathew/weathermood" target="_blank" class="github-link" title="Open in GitHub">
+                <i class="fab fa-github"></i>Github
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

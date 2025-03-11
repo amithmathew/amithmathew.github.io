@@ -24,7 +24,7 @@ SQL for "read" workloads will never die. DML and DDL are a different story, and 
 * Most Enterprise Spark workloads use SparkSQL
 * The Hadoop ecosystem went from MapReduce and Java to Hive and other SQL-like interfaces
 * Databricks is focussed on building a robust SQL layer with Databricks SQL
-* More and more folks are building datapipelines using DBT and other SQL based tooling
+* Rapid adoption of DBT and other SQL based data pipeline tooling
 * BigQuery and Snowflake remain wildly successful
 
 The most common complaint against SQL that I've heard is that the actual SQL Engine is a magic black box, which turns some programmers off, and is sometimes a bad thing in system design. But assuming you're following most basic best practices around data modelling, it works for 99% of the use cases I've seen. And for the remaining 1%, you go find somebody who knows how to open up that box and tweak the knobs to make it perform.

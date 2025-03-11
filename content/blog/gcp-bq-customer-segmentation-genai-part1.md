@@ -2,7 +2,7 @@
 title: "[Part 1 of 2] Using GenAI to make customer segmentation more fun!"
 date: "2024-04-04T15:57:24-04:00"
 description: "Most marketers are familiar with customer segmentation. Let's do some customer segmentation with ML and then use Google Gemini to add some sizzle!"
-draft: False
+draft: True
 tags: ["ai","llm","marketing", "customer-segmentation",]
 ---
 
